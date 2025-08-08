@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulmed Odontología</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- link rel="stylesheet" href="./assets/css/estilos.css" -->
+    <!-- Hoja de estilo para pantallas hasta 370px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos_upto_400.css" media="screen and (max-width: 400px)">
+
+    <!-- Hoja de estilo para pantallas hasta 768px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos_upto_768.css"
+        media="screen and (min-width: 401px) and (max-width: 768px)">
+
+    <!-- Hoja de estilo para pantallas hasta 1024px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos_upto_1024.css"
+        media="screen and (min-width: 769px) and (max-width: 1024px)">
+
+    <!-- Hoja de estilo por defecto para pantallas mayores a 1024px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos.css" media="screen and (min-width: 1025px)">
+    <!-- link rel="stylesheet" href="./assets/css/estilos_form.css" -->
+    <link rel="shortcut icon" href="./assets/img/LogoConsulmedCuadradoNormal.png" type="image/png">
+</head>
+
+<body class="barlow-regular">
+    <header>
+        <!-- Header desde JS -->
+        <div class="container-header" id="header">
+        </div>
+    </header>
+
+    <main>
+        <div class="maintopmargin">
+
+        </div>
+        
+        
+        <!-- Quines somos desde JS-->
+        <section class="quienes_somos">
+            <h2  id="quienes_som">¿Quiénes Somos?</h2>
+            <div class="contenedor-quienes">
+                <div class="item-quienes"></div>
+                <div class="item-quienes" id="quienes_somos"></div>
+                <div class="item-quienes"></div>
+            </div>
+        </section>
+        <hr>
+
+        <!-- Dónde estamos -->
+        <section id="donde">
+            <div class="dondemapa">
+                <div class="titulomapa">
+                    <h2>¿Dónde Estamos?</h2><br>
+                </div>
+                <div class="titulomapa-clinica">
+                    <h2>Clínica Ayacucho</h2><br>
+                </div>
+                <div class="contenedormapa">
+                    <div class="item-mapai"></div>
+                    <div class="item-mapa" id="mapa">
+                        <iframe class="iframemapa" title="mapa"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1934.2296411594323!2d-58.39630824999016!3d-34.59299897847017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabd0db4470b%3A0x425a81c0f0ec490!2sConsulmed!5e0!3m2!1ses!2sar!4v1754482202902!5m2!1ses!2sar"
+                            width="800" height="600" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="item-mapad"></div>
+                </div>
+                <div class="dondemapa">
+                    <div class="titulomapa-clinica">
+                        <br><h2>Clínica Belgrano</h2><br>
+                    </div>
+                    <div class="contenedormapa">
+                        <div class="item-mapai"></div>
+                        <div class="item-mapa" id="mapa">
+                            <iframe class="iframemapa" title="mapa"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.535866885713!2d-58.45816318761806!3d-34.56530515535955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d11184171b%3A0x6b93f7e56206a9de!2sConsulmed%20Belgrano!5e0!3m2!1ses!2sar!4v1754482337868!5m2!1ses!2sar"
+                                width="800" height="600" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="item-mapad"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div>
+            <hr>
+        </div>
+
+        
+
+    </main>
+
+    <footer>
+        <!--  desde JS -->
+        <!-- Nav del footer-->
+        <div class="footer-nav" id="nav-footer">
+        </div>
+        <!-- Medios de pago -->
+        <div id="medios_pago">
+        </div>
+        <!-- Pie -->
+        <div id="pie">
+        </div>
+    </footer>
+
+    <!-- Logo flotante WhatsApp desde JS-->
+    <div id="whatsapp-icon">        
+    </div>
+
+    <!-- Scripts JS de la página -->
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/slides.js"></script>
+    <script src="./assets/js/quienes_somos.js"></script>
+    <script src="./assets/js/form-contacto.js"></script>
+    <script src="./assets/js/validar_form.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/wa.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulmed Odontología</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- link rel="stylesheet" href="./assets/css/estilos.css" -->
+    <!-- Hoja de estilo para pantallas hasta 370px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos_upto_400.css" media="screen and (max-width: 400px)">
+
+    <!-- Hoja de estilo para pantallas hasta 768px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos_upto_768.css"
+        media="screen and (min-width: 401px) and (max-width: 768px)">
+
+    <!-- Hoja de estilo para pantallas hasta 1024px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos_upto_1024.css"
+        media="screen and (min-width: 769px) and (max-width: 1024px)">
+
+    <!-- Hoja de estilo por defecto para pantallas mayores a 1024px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos.css" media="screen and (min-width: 1025px)">
+    <!-- link rel="stylesheet" href="./assets/css/estilos_form.css" -->
+    <link rel="shortcut icon" href="./assets/img/LogoConsulmedCuadradoNormal.png" type="image/png">
+    <!-- Stylesheet temporal para mostrar grid de fotos-->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+</head>
+
+<body class="barlow-regular">
+    <header>
+        <!-- Header desde JS -->
+        <div class="container-header" id="header">
+        </div>
+    </header>
+
+    <main>
+        <div class="maintopmargin">
+        </div>
+        <h1>Renovamos electrodomésticos y cuidamos el planeta</h1>
+<!-- Original -->
+        <!--
+        <div class="productos">
+            
+            <div id="app">
+                <div class="container-productos">
+                    <div v-for="elemento in datos" :key="elemento.id" class="tarjeta-productos">
+                        <div class="cuerpo">
+                            <img width="200" v-bind:src="elemento.Foto" alt="elemento.Foto">
+                            <p>Producto: {{elemento.Nombre}}</p>
+                            <p>Marca: {{elemento.Marca}}</p>
+                            <p>Descripcion del producto: {{elemento.Descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        -->
+        <!-- fUNCIONA LOCALMENTE -->
+        <!--
+            <div id="app">
+                <div class="container-productos">
+                    <div v-for="elemento in datos" v-bind:key="elemento.id">
+                        <div class="tarjeta-productos">
+                            <img width="200" v-bind:src="elemento.Foto" alt="Foto del producto">
+                            <p>Producto: {{elemento.Nombre}}</p>
+                            <p>Marca: {{elemento.Marca}}</p>
+                            <p>Descripción del producto: {{elemento.Descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            -->
+            <div id="app">
+                <div class="container-productos">
+                    <div class="tarjeta-productos" v-for="elemento in datos" v-bind:key="elemento.id">
+                        <div>
+                            <img width="200" v-bind:src="elemento.Foto" alt="Foto del producto">
+                            <p>Producto: {{elemento.Nombre}}</p>
+                            <p>Marca: {{elemento.Marca}}</p>
+                            <p>Descripción del producto: {{elemento.Descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        
+    </main>
+
+    <footer>
+        <!-- desde JS -->
+        <!-- Nav del footer-->
+        <div class="footer-nav" id="nav-footer">
+        </div>
+        <!-- Medios de pago -->
+        <div id="medios_pago">
+        </div>
+        <!-- Pie -->
+        <div id="pie">
+        </div>
+    </footer>
+
+    <!-- Logo flotante WhatsApp desde JS-->
+    <div id="whatsapp-icon">        
+    </div>
+
+    <!-- Scripts JS de la página -->
+    <script src="./assets/js/header.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/electro.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/wa.js"></script>
+
+</body>
+
+</html>
