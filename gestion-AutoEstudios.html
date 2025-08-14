@@ -34,47 +34,42 @@
     <div class="contenedor-gestiones">
         <br>
         <a href="./gestion-AutoTerceros.html">
-            <h3>Autorizar Gestión de Terceros</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-AutoEstudios.html">
             <h3>Autorizar Estudios</h3>
         </a>
+        <br><br>
+        <p>
+            A continuación le pedimos que complete los datos del paciente por el que solicitará autorización y adjunte las órdenes de los mismos.<br>
+            Una vez enviado la misma se verificará la solicitud y se responderá a la misma.
+        </p>
         <br>
         <br>
-        <a href="./gestion-PlacasRX.html">
-            <h3>Placas Radiográficas</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-CargaEstudiosHC.html">
-            <h3>Carga de Estudios e Imagenes para su HC</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-Recetas.html">
-            <h3>Descargar Recetas</h3>
-        </a>        
-        <br>
-        <br>
-        <a href="./gestion-Constancias.html">
-            <h3>Constancias de Asistencia</h3>
-        </a>        <br>
-        <br>
-        <a href="./gestion-BuenaConducta.html">
-            <h3>Reglas de Buena Conducta</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-FAQ.html">
-            <h3>Preguntas Frecuentes</h3>
-        </a>        
-        <br>
-        <br>
-        <a href="./gestion-OtrasConsultas.html">
-            <h3>Otras Consultas</h3>
-        </a>
+        <form id="form-archivos" enctype="multipart/form-data">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{7,15}" placeholder="Solo números" required>
+
+        <label for="documento">Número de documento:</label>
+        <input type="text" id="documento" name="documento" required>
+
+        <label for="archivo">Subir archivos:</label>
+        <input type="file" id="archivo" name="archivo[]" multiple accept=".jpg,.jpeg,.png,.pdf" required>
+
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <label>
+            <input type="checkbox" name="acepto" required>
+            Acepto los términos y condiciones
+        </label>
+
+        <button type="submit">Enviar documentación</button>
+    </form>
+
 
         <!-- Imagen principal -->
         <div>

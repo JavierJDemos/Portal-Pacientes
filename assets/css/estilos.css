@@ -490,6 +490,133 @@ main h1 {
 }
 
 
+form {
+    background: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*Gestiones - Buenas conducta
+*/
+
+.normas-consultorio {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.normas-consultorio h2 {
+    font-family: 'Overpass', sans-serif;
+    color: #005b8f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.normas-consultorio ul {
+    list-style: disc;
+    padding-left: 40px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.normas-consultorio li {
+    margin-bottom: 10px;
+}
+
+
+
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    background: #f4f4f4;
+    color: #333;
+    border: none;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question:hover {
+    background: #e2e2e2;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #fff;
+    border-left: 3px solid #007BFF;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+
+
+
+
+
+
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*Quienes Somos*/
 

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulmed Odontología</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- link rel="stylesheet" href="./assets/css/estilos.css" -->
+    
+    <!-- Hoja de estilo por defecto para pantallas mayores a 1024px de ancho -->
+    <link rel="stylesheet" href="./assets/css/estilos.css" media="screen and (min-width: 1025px)">
+    <!-- link rel="stylesheet" href="./assets/css/estilos_form.css" -->
+    <link rel="shortcut icon" href="./assets/img/LogoConsulmedCuadradoNormal.png" type="image/png">
+</head>
+
+<body class="barlow-regular">
+    <header>
+        <!-- Header desde JS -->
+        <div class="container-header" id="header">
+        </div>
+    </header>
+
+    <main>
+    <div class="maintopmargin"></div>
+<div class="fila-imagenes-p">
+    <h1 class="titulo-p">Gestiones</h1>
+
+    <div class="contenedor-imagenes-p">
+        <div class="item-p">
+            <a href="cartilla.html">
+                <img src="./assets/img/Pacientes/1-Familia.jpg" alt="Imagen 1" class="img-ajustada-p">
+                <p>Titular</p>
+            </a>
+        </div>
+
+        <div class="item-p">
+            <a href="cartilla-2.html">
+                <img src="./assets/img/Pacientes/2-Familia.jpg" alt="Imagen 2" class="img-ajustada-p">
+                <p>Autorizado 1</p>
+            </a>
+        </div>
+
+        <div class="item-p">
+            <a href="cartilla-3.html">
+                <img src="./assets/img/Pacientes/3-Familia.jpg" alt="Imagen 3" class="img-ajustada-p">
+                <p>Autorizado 2</p>
+            </a>
+        </div>
+    </div>
+
+    <h1>Consulta de Citas del Paciente</h1>
+
+    <form id="form-citas">
+        <label for="fecha">Seleccionar fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <button type="button" id="buscar-citas">Buscar</button>
+    </form>
+
+    <h2>Historial de citas</h2>
+    <table id="tabla-citas" border="1" cellpadding="5" style="width:100%; border-collapse: collapse; text-align:left;">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Profesional</th>
+                <th>Especialidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertarán las filas con JS -->
+        </tbody>
+    </table>
+
+    <button id="generar-pdf" style="margin-top:20px;">Generar constancia en PDF</button>
+
+    <script>
+        const { jsPDF } = window.jspdf;
+
+        // Datos ficticios para la maqueta
+        const citasFalsas = [
+            { fecha: '2025-08-10', hora: '09:00', profesional: 'Dr. Pérez', especialidad: 'Odontología' },
+            { fecha: '2025-08-14', hora: '15:30', profesional: 'Dra. López', especialidad: 'Ortodoncia' },
+            { fecha: '2025-08-20', hora: '11:00', profesional: 'Dr. García', especialidad: 'Cirugía' }
+        ];
+
+        const tablaBody = document.querySelector('#tabla-citas tbody');
+        const buscarBtn = document.getElementById('buscar-citas');
+        const fechaInput = document.getElementById('fecha');
+
+        buscarBtn.addEventListener('click', () => {
+            const fechaSeleccionada = fechaInput.value;
+            tablaBody.innerHTML = '';
+
+            const citasFiltradas = citasFalsas.filter(cita => cita.fecha === fechaSeleccionada);
+
+            if (citasFiltradas.length > 0) {
+                citasFiltradas.forEach(cita => {
+                    const fila = document.createElement('tr');
+                    fila.innerHTML = `
+                        <td>${cita.fecha}</td>
+                        <td>${cita.hora}</td>
+                        <td>${cita.profesional}</td>
+                        <td>${cita.especialidad}</td>
+                    `;
+                    tablaBody.appendChild(fila);
+                });
+            } else {
+                const fila = document.createElement('tr');
+                fila.innerHTML = `<td colspan="4" style="text-align:center;">No hay citas en esta fecha</td>`;
+                tablaBody.appendChild(fila);
+            }
+        });
+
+        document.getElementById('generar-pdf').addEventListener('click', () => {
+            const doc = new jsPDF();
+            doc.setFontSize(16);
+            doc.text("Constancia de Citas", 10, 10);
+
+            let y = 20;
+            for (let row of tablaBody.rows) {
+                doc.text(`${row.cells[0].innerText} - ${row.cells[1].innerText} - ${row.cells[2].innerText} - ${row.cells[3].innerText}`, 10, y);
+                y += 10;
+            }
+
+            doc.save("constancia_citas.pdf");
+        });
+    </script>
+
+        
+
+        
+    </div>
+</main>
+
+
+    <footer>
+        <!--  desde JS -->
+        <!-- Nav del footer-->
+        <div class="footer-nav" id="nav-footer">
+        </div>
+        <!-- Medios de pago -->
+        <div id="medios_pago">
+        </div>
+        <!-- Pie -->
+        <div id="pie">
+        </div>
+    </footer>
+
+    <!-- Logo flotante WhatsApp desde JS-->
+    <div id="whatsapp-icon">        
+    </div>
+
+    <!-- Scripts JS de la página -->
+    <script src="./assets/js/header.js"></script>
+    
+    <script src="./assets/js/quienes_somos.js"></script>
+    <script src="./assets/js/form-contacto.js"></script>
+    <script src="./assets/js/validar_form.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/wa.js"></script>
+
+</body>
+
+</html>

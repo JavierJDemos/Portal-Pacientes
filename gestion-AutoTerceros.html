@@ -36,45 +36,43 @@
         <a href="./gestion-AutoTerceros.html">
             <h3>Autorizar Gestión de Terceros</h3>
         </a>
+        <br><br>
+        <p>
+            A continuación le pedimos que complete los datos del paciente por el que solicitará autorización para gestionar sus Citas Odontológicas.<br>
+            Una vez enviado la misma se verificará la solicitud y se habilitará la posibliidad
+        </p>
         <br>
         <br>
-        <a href="./gestion-AutoEstudios.html">
-            <h3>Autorizar Estudios</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-PlacasRX.html">
-            <h3>Placas Radiográficas</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-CargaEstudiosHC.html">
-            <h3>Carga de Estudios e Imagenes para su HC</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-Recetas.html">
-            <h3>Descargar Recetas</h3>
-        </a>        
-        <br>
-        <br>
-        <a href="./gestion-Constancias.html">
-            <h3>Constancias de Asistencia</h3>
-        </a>        <br>
-        <br>
-        <a href="./gestion-BuenaConducta.html">
-            <h3>Reglas de Buena Conducta</h3>
-        </a>
-        <br>
-        <br>
-        <a href="./gestion-FAQ.html">
-            <h3>Preguntas Frecuentes</h3>
-        </a>        
-        <br>
-        <br>
-        <a href="./gestion-OtrasConsultas.html">
-            <h3>Otras Consultas</h3>
-        </a>
+        <form id="form-verificacion">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+<br><br>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+<br><br>
+        <label for="documento">Número de documento:</label>
+        <input type="text" id="documento" name="documento" required>
+<br><br>
+        <label for="relacion">Tipo de relación:</label>
+        <select id="relacion" name="relacion" required>
+            <option value="">Seleccione una opción</option>
+            <option value="esposo">Esposo/a</option>
+            <option value="hijo">Hijo</option>
+            <option value="familiar">Familiar</option>
+            <option value="otro">Otro</option>
+        </select>
+        <br><br>
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+<br><br>
+        <label>
+            <input type="checkbox" name="acepto" required>
+            Acepto los términos y condiciones
+        </label>
+
+        <button type="submit">Enviar solicitud</button>
+    </form>
+
 
         <!-- Imagen principal -->
         <div>
