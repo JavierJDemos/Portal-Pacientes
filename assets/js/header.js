@@ -18,7 +18,7 @@ let encabezado = `
             
             <li> <a href="#">Agenda</a>
                 <ul>
-                    <li><a href="Guardia24hs.html">Guardia 24hs</a></li>    
+                    <li><a href="guardia24hs.html">Guardia 24hs</a></li>    
                     <li><a href="proximas.html">Próximas</a></li>    
                     <li><a href="ausentes.html">Ausentes</a></li>
                 </ul>
